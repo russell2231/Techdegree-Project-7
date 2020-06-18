@@ -538,7 +538,7 @@ nav img {
   }
 }
 
-.social-stats .social-container {
+.social-stats .stat-container .social-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +555,7 @@ nav img {
 }
 
 @media (min-width: 768px) {
-  .social-stats .social-container {
+  .social-stats .stat-container .social-container {
     padding: 1.5rem;
     margin: 1.5rem;
     width: 100%;
@@ -566,22 +566,22 @@ nav img {
 }
 
 @media (min-width: 1024px) {
-  .social-stats .social-container {
+  .social-stats .stat-container .social-container {
     padding: 2rem;
     margin: 2rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .social-stats .social-container {
+  .social-stats .stat-container .social-container {
     padding: 2rem;
     margin: 2.5rem;
   }
 }
 
-.social-stats .social-container .social-image {
-  min-width: 8rem;
-  height: 8rem;
+.social-stats .stat-container .social-container .social-image {
+  width: 80px;
+  height: 80px;
   background: #7477bf;
   border-radius: 50%;
   display: -webkit-box;
@@ -596,69 +596,69 @@ nav img {
 }
 
 @media (min-width: 768px) {
-  .social-stats .social-container .social-image {
-    min-width: 6rem;
-    height: 6rem;
+  .social-stats .stat-container .social-container .social-image {
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (min-width: 1024px) {
-  .social-stats .social-container .social-image {
-    min-width: 7rem;
-    height: 7rem;
+  .social-stats .stat-container .social-container .social-image {
+    width: 70px;
+    height: 70px;
   }
 }
 
 @media (min-width: 1440px) {
-  .social-stats .social-container .social-image {
-    min-width: 10rem;
-    height: 10rem;
+  .social-stats .stat-container .social-container .social-image {
+    width: 100px;
+    height: 100px;
   }
 }
 
-.social-stats .social-container .social-image img {
+.social-stats .stat-container .social-container .social-image img {
   display: block;
   width: 50%;
 }
 
-.social-stats .social-container .social-text-title {
+.social-stats .stat-container .social-container .social-text-title {
   color: #7477bf;
   font-size: 1.6rem;
   margin-left: 1rem;
 }
 
 @media (min-width: 768px) {
-  .social-stats .social-container .social-text-title {
+  .social-stats .stat-container .social-container .social-text-title {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .social-stats .social-container .social-text-title {
+  .social-stats .stat-container .social-container .social-text-title {
     font-size: 2rem;
   }
 }
 
-.social-stats .social-container .social-text-stat {
+.social-stats .stat-container .social-container .social-text-stat {
   font-size: 3.5rem;
   font-weight: 100;
   margin-left: 1rem;
 }
 
 @media (min-width: 768px) {
-  .social-stats .social-container .social-text-stat {
+  .social-stats .stat-container .social-container .social-text-stat {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .social-stats .social-container .social-text-stat {
+  .social-stats .stat-container .social-container .social-text-stat {
     font-size: 4.5rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .social-stats .social-container .social-text-stat {
+  .social-stats .stat-container .social-container .social-text-stat {
     font-size: 5.5rem;
   }
 }
