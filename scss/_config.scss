@@ -9,8 +9,27 @@ $background: #fffffe;
 $background-shade: darken(#fff, 2%);
 $stroke: #2b2c34;
 $notification: #85db81;
+$notify-border-size: 0.25em;
+$notify-border-color: darken($notification, 10%);
 $border-color: #dfdfdf;
 $border: 1px solid $border-color;
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
 
 @mixin tablet {
 	@media (min-width: 768px) {
