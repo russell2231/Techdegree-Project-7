@@ -5,8 +5,11 @@
 	grid-template-areas: "header" "nav" "main";
 
 	@include tablet {
-		grid-template-columns: 55px 1fr;
+		grid-template-columns: 8rem 1fr;
 		grid-template-areas: "header header" "nav main";
+	}
+	@include ultrawide {
+		grid-template-columns: 11rem 1fr;
 	}
 }
 
@@ -27,7 +30,7 @@ main {
 		"recent-activity" "message-user" "settings";
 
 	@include tablet {
-		grid-template-columns: repeat(2, minmax(200px, 100vh));
+		grid-template-columns: repeat(2, minmax(20rem, 100vh));
 		grid-template-areas: "dashboard dashboard" "alert alert" "traffic traffic" "daily-traffic mobile-users"
 			"social-stats social-stats" "new-members recent-activity" "message-user settings";
 	}

@@ -1,8 +1,9 @@
 nav {
-	background-color: #4d4c72;
+	background-color: darken($primary-color, 25%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0.5rem;
 
 	@include tablet {
 		flex-direction: column;
@@ -10,13 +11,23 @@ nav {
 	}
 
 	a {
-		margin: 0.5rem 0.7rem;
+		margin: 0.5rem 1rem;
 
 		@include tablet {
-			margin-top: 2rem;
+			margin: 2rem;
+		}
+		@include ultrawide {
+			margin: 2.5rem;
 		}
 	}
 	img {
-		width: 25px;
+		width: 2.5rem;
+
+		@include tablet {
+			width: 3rem;
+		}
+		@include ultrawide {
+			width: 3.5rem;
+		}
 	}
 }

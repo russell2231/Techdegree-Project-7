@@ -1,0 +1,61 @@
+.traffic {
+	.traffic-header {
+		display: flex;
+		justify-content: space-between;
+		margin: 1rem;
+
+		@include tablet {
+			margin: 2rem;
+		}
+		@include desktop {
+			margin: 2.5rem;
+		}
+		@include desktop {
+			margin: 3.5rem;
+		}
+
+		h3 {
+			margin: 0;
+		}
+		ul {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+
+			li {
+				margin: 0 0.5rem;
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.widget-container-full {
+		padding: 0 1rem;
+
+		@include tablet {
+			padding: 0 2rem;
+		}
+		@include desktop {
+			padding: 0 2.5rem;
+		}
+		@include ultrawide {
+			padding: 0 3.5rem;
+		}
+	}
+}
+
+.daily,
+.mobile {
+	.widget-container-half {
+		padding: 0 1.5rem;
+
+		@include tablet {
+			padding: 0 2rem;
+		}
+		@include desktop {
+			padding: 0 2.5rem;
+		}
+		@include ultrawide {
+			padding: 0 3.5rem;
+		}
+	}
+}

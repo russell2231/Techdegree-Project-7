@@ -1,0 +1,87 @@
+.social-stats {
+	.stat-container {
+		@include tablet {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.social-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $background-shade;
+		border: 1px solid $border-color;
+		margin: 1.5rem 1rem;
+		padding: 1rem;
+
+		@include tablet {
+			padding: 1.5rem;
+			margin: 1.5rem;
+			width: 100%;
+			justify-content: flex-start;
+		}
+		@include desktop {
+			padding: 2rem;
+			margin: 2rem;
+		}
+		@include ultrawide {
+			padding: 2rem;
+			margin: 2.5rem;
+		}
+
+		.social-image {
+			min-width: 8rem;
+			height: 8rem;
+			background: $primary-color;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include tablet {
+				min-width: 6rem;
+				height: 6rem;
+			}
+			@include desktop {
+				min-width: 7rem;
+				height: 7rem;
+			}
+			@include ultrawide {
+				min-width: 10rem;
+				height: 10rem;
+			}
+
+			img {
+				display: block;
+				width: 50%;
+			}
+		}
+		.social-text-title {
+			color: $primary-color;
+			font-size: 1.6rem;
+			margin-left: 1rem;
+
+			@include tablet {
+				font-size: 1.8rem;
+			}
+			@include ultrawide {
+				font-size: 2rem;
+			}
+		}
+		.social-text-stat {
+			font-size: 3.5rem;
+			font-weight: 100;
+			margin-left: 1rem;
+
+			@include tablet {
+				font-size: 3rem;
+			}
+			@include desktop {
+				font-size: 4.5rem;
+			}
+			@include ultrawide {
+				font-size: 5.5rem;
+			}
+		}
+	}
+}

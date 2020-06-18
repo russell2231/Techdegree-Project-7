@@ -1,0 +1,66 @@
+.members,
+.recent-activity {
+	.members-container {
+		display: flex;
+		padding: 1.5rem;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: $border;
+		margin: 0 1rem;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		.profile-image {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+
+			@include tablet {
+				width: 4rem;
+				height: 4rem;
+			}
+			@include desktop {
+				width: 5rem;
+				height: 5rem;
+			}
+			@include ultrawide {
+				width: 6rem;
+				height: 6rem;
+			}
+		}
+		.members-text {
+			flex-grow: 10;
+			margin-left: 1rem;
+
+			p,
+			a {
+				font-size: 1.2rem;
+
+				@include tablet {
+					font-size: 1rem;
+				}
+				@include desktop {
+					font-size: 1.2rem;
+				}
+				@include ultrawide {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.join-date,
+		.read-more {
+			font-size: 1.2rem;
+			margin: 0;
+			align-self: center;
+
+			@include ultrawide {
+				font-size: 1.4rem;
+			}
+		}
+		.read-more {
+			color: $primary-color;
+		}
+	}
+}

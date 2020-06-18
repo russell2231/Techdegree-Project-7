@@ -1,60 +1,96 @@
 header {
-	background: #7477bf;
-	color: #eee;
+	background: $primary-color;
+	color: $text-light;
 	display: flex;
 	align-items: center;
-	font-size: 10px;
-	padding: 0 0.5rem;
+	font-size: 1rem;
+	padding: 1rem;
+
+	@include desktop {
+		padding: 1.5rem;
+	}
+	@include ultrawide {
+		// padding: 2rem;
+	}
 
 	h1 {
 		margin-right: auto;
-		padding-left: 0.2rem;
-		font-size: 20px;
+		padding-left: 0.5rem;
+		font-size: 2rem;
 		font-weight: 100;
-		text-shadow: black 0.5px 0.5px;
+		text-shadow: $text-dark 0.5px 0.5px;
+
+		@include tablet {
+			padding-left: 1rem;
+		}
+		@include ultrawide {
+			padding-left: 2rem;
+			font-size: 2.5rem;
+		}
 
 		.title-text {
-			color: #fff;
+			color: $text-light;
 			font-weight: 500;
 		}
 		.trademark {
-			font-size: 15px;
+			font-size: 1.5rem;
 			position: relative;
-			bottom: 3px;
+			bottom: 0.3rem;
+			font-weight: 100;
+
+			@include ultrawide {
+				font-size: 1.8rem;
+			}
 		}
 	}
 	.bell {
-		width: 35px;
-		height: 33px;
-		border-right: 1px solid white;
+		width: 3.5rem;
+		height: 3.3rem;
+		border-right: 1px solid $stroke;
 		display: flex;
-		margin-right: 0.3rem;
+		margin-right: 1rem;
 		padding-right: 0.5rem;
 		cursor: pointer;
 
 		svg:hover {
-			background-color: #e2e3f6;
+			background-color: $secondary-color;
 			transition: 0.5s ease-out;
 		}
 
 		#notification {
-			width: 7px;
-			height: 5px;
-			background-color: #85db81;
+			width: 0.7rem;
+			height: 0.5rem;
+			background-color: $notification;
 			border-radius: 50%;
 			position: relative;
-			top: 3px;
-			right: 5px;
+			top: 0.3rem;
+			right: 0.5rem;
 		}
 	}
 	img {
-		width: 45px;
+		width: 4.5rem;
 		border-radius: 50%;
 		display: block;
 		padding: 0 0.5rem;
+
+		@include ultrawide {
+			width: 5rem;
+		}
 	}
 	h3 {
-		font-weight: 400;
-		text-shadow: black 0.5px 0.5px;
+		text-shadow: $text-dark 0.5px 0.5px;
+		margin: 0;
+		text-transform: none;
+
+		@include tablet {
+			margin-right: 1rem;
+		}
+		@include desktop {
+			margin-right: 2rem;
+		}
+		@include ultrawide {
+			margin-right: 3rem;
+			font-size: 1.6rem;
+		}
 	}
 }

@@ -2,40 +2,100 @@
 @import "layout";
 @import "header";
 @import "navigation";
-@import "content";
+@import "dashboard";
+@import "charts";
+@import "social";
+@import "members";
+@import "message";
+@import "settings";
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 body {
-	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: $font;
+	background-color: $background;
 }
 
 main {
-	color: #676666;
+	color: $text-dark;
+}
+h3 {
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 1.5rem 1rem;
+
+	@include tablet {
+		font-size: 1.4rem;
+		font-weight: 300;
+		margin: 1.5rem 2rem;
+	}
+	@include desktop {
+		margin: 1.5rem 2.5rem;
+	}
+	@include ultrawide {
+		margin: 1.5rem 3.5rem;
+	}
+}
+
+.traffic,
+.daily,
+.mobile,
+.social-stats,
+.members,
+.recent-activity,
+.message {
+	border-bottom: $border;
+	padding-bottom: 1.5rem;
+
+	@include tablet {
+		padding-bottom: 2rem;
+	}
+	@include desktop {
+		padding-bottom: 2.5rem;
+	}
+	@include desktop {
+		padding-bottom: 3.5rem;
+	}
+}
+
+.daily,
+.members,
+.message {
+	@include tablet {
+		border-right: $border;
+	}
 }
 
 input::placeholder,
 textarea::placeholder {
-	color: #676666;
+	color: $text-dark;
 	font-weight: 400;
 }
 
 button {
-	margin: 0.5rem 0;
+	margin: 1rem 0;
 	border-radius: 4px;
-	padding: 0.7rem;
-	color: #fff;
+	padding: 1.4rem;
+	color: $button-text-light;
 	border: none;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .button-primary {
-	background: #7477bf;
+	background: $primary-color;
 }
 
 .button-cancel {
-	background: #b2b2b2;
+	background-color: $background;
+	border: 2px solid $stroke;
+	color: $button-text-dark;
 }

@@ -1,0 +1,138 @@
+.settings {
+	padding-bottom: 1.5rem;
+
+	.settings-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1.5rem 1rem;
+		font-size: 1.2rem;
+
+		@include tablet {
+			margin: 2.5rem 2rem;
+		}
+		@include desktop {
+			margin: 2.63rem 3rem;
+		}
+		@include ultrawide {
+			margin: 2.63rem 4rem;
+		}
+
+		.onoffswitch {
+			position: relative;
+			width: 9rem;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}
+		.onoffswitch-checkbox {
+			position: absolute;
+			opacity: 0;
+			pointer-events: none;
+		}
+		.onoffswitch-label {
+			display: block;
+			overflow: hidden;
+			cursor: pointer;
+			border: 2px solid $border-color;
+			border-radius: 20px;
+		}
+		.onoffswitch-inner {
+			display: block;
+			width: 200%;
+			margin-left: -100%;
+			transition: margin 0.3s ease-in 0s;
+		}
+		.onoffswitch-inner:before,
+		.onoffswitch-inner:after {
+			display: block;
+			float: left;
+			width: 50%;
+			height: 2.4rem;
+			padding: 0;
+			line-height: 24px;
+			font-size: 1.4rem;
+			color: $text-light;
+			font-family: $font;
+			font-weight: bold;
+			box-sizing: border-box;
+		}
+		.onoffswitch-inner:before {
+			content: "ON";
+			padding-left: 1rem;
+			background-color: $primary-color;
+			color: $text-light;
+		}
+		.onoffswitch-inner:after {
+			content: "OFF";
+			padding-right: 1rem;
+			background-color: $background;
+			color: $border-color;
+			text-align: right;
+		}
+		.onoffswitch-switch {
+			display: block;
+			width: 1.8rem;
+			margin: 0.6rem;
+			background: $background;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 5.6rem;
+			border: 2px solid $border-color;
+			border-radius: 20px;
+			transition: all 0.3s ease-in 0s;
+		}
+		.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+			margin-left: 0;
+		}
+		.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+			right: 0px;
+		}
+	}
+	.timezone-option {
+		margin: 1.5rem 1rem;
+
+		@include tablet {
+			margin: 1.5rem 2rem;
+		}
+		@include desktop {
+			margin: 1.5rem 3rem;
+		}
+		@include ultrawide {
+			margin: 1.5rem 4rem;
+		}
+
+		.form-field {
+			width: 100%;
+			border-radius: 4px;
+			border: $border;
+			padding: 1rem;
+			background: $background-shade;
+		}
+	}
+	.settings-button {
+		display: flex;
+		margin: 0 1rem;
+		justify-content: space-between;
+
+		@include tablet {
+			margin: 0 2rem;
+		}
+		@include desktop {
+			margin: 0 3rem;
+		}
+		@include desktop {
+			margin: 0 4rem;
+		}
+
+		button {
+			width: 47%;
+
+			@include tablet {
+				padding: 1.2rem;
+				margin-top: 1.4rem;
+			}
+		}
+	}
+}
