@@ -1,0 +1,22 @@
+nav {
+	background-color: #4d4c72;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include tablet {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	a {
+		margin: 0.5rem 0.7rem;
+
+		@include tablet {
+			margin-top: 2rem;
+		}
+	}
+	img {
+		width: 25px;
+	}
+}

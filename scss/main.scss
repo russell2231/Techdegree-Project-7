@@ -1,0 +1,41 @@
+@import "config";
+@import "layout";
+@import "header";
+@import "navigation";
+@import "content";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	color: #676666;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #676666;
+	font-weight: 400;
+}
+
+button {
+	margin: 0.5rem 0;
+	border-radius: 4px;
+	padding: 0.7rem;
+	color: #fff;
+	border: none;
+	font-size: 12px;
+}
+
+.button-primary {
+	background: #7477bf;
+}
+
+.button-cancel {
+	background: #b2b2b2;
+}
