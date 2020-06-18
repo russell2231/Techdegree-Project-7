@@ -1,7 +1,10 @@
 .social-stats {
 	.stat-container {
+		display: flex;
+		flex-direction: column;
+
 		@include tablet {
-			display: flex;
+			flex-direction: row;
 			justify-content: center;
 		}
 
@@ -11,7 +14,7 @@
 			justify-content: center;
 			background-color: $background-shade;
 			border: 1px solid $border-color;
-			margin: 1.5rem 1rem;
+			margin: 1rem 1rem;
 			padding: 1rem;
 
 			@include tablet {
@@ -51,9 +54,9 @@
 					height: 100px;
 				}
 
-				img {
+				svg {
 					display: block;
-					width: 50%;
+					width: 60%;
 				}
 			}
 			.social-text-title {
