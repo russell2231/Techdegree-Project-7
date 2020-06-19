@@ -99,13 +99,143 @@ let trafficOptions = {
 		display : false
 	}
 };
-// Create Graph
-const trafficCtx = document.querySelector('#traffic-chart');
-let trafficChart = new Chart(trafficCtx, {
-	type    : 'line',
-	data    : trafficData,
-	options : trafficOptions
+
+// Switch between hourly, daily, weekly, monthly
+const timeData = document.querySelectorAll('.traffic-nav-link');
+
+// Clear active class
+function clearTimeData() {
+	timeData.forEach(function(time) {
+		if (time.classList.contains('active')) {
+			time.classList.remove('active');
+		}
+	});
+}
+
+// Switch between
+const timeDataNav = document.querySelector('.traffic-nav');
+
+timeDataNav.addEventListener('click', (e) => {
+	if (e.target.classList.contains('traffic-nav-link')) {
+		clearTimeData();
+
+		if (e.target.textContent === 'Daily') {
+			e.target.classList.add('active');
+
+			trafficData.labels = [
+				'16-22',
+				'23-29',
+				'30-5',
+				'6-12',
+				'13-19',
+				'20-26',
+				'27-3',
+				'4-10',
+				'11-17',
+				'18-24',
+				'25-31'
+			];
+			trafficData.datasets[0].data = [
+				parseFloat(750 / 7).toFixed(1),
+				parseFloat(1250 / 7).toFixed(1),
+				parseFloat(1000 / 7).toFixed(1),
+				parseFloat(2000 / 7).toFixed(1),
+				parseFloat(1500 / 7).toFixed(1),
+				parseFloat(1750 / 7).toFixed(1),
+				parseFloat(1250 / 7).toFixed(1),
+				parseFloat(1850 / 7).toFixed(1),
+				parseFloat(2250 / 7).toFixed(1),
+				parseFloat(1500 / 7).toFixed(1),
+				parseFloat(2500 / 7).toFixed(1)
+			];
+		} else if (e.target.textContent === 'Hourly') {
+			e.target.classList.add('active');
+
+			trafficData.labels = [
+				'16-22',
+				'23-29',
+				'30-5',
+				'6-12',
+				'13-19',
+				'20-26',
+				'27-3',
+				'4-10',
+				'11-17',
+				'18-24',
+				'25-31'
+			];
+			trafficData.datasets[0].data = [
+				parseFloat(750 / 7 / 24).toFixed(1),
+				parseFloat(1250 / 7 / 24).toFixed(1),
+				parseFloat(1000 / 7 / 24).toFixed(1),
+				parseFloat(2000 / 7 / 24).toFixed(1),
+				parseFloat(1500 / 7 / 24).toFixed(1),
+				parseFloat(1750 / 7 / 24).toFixed(1),
+				parseFloat(1250 / 7 / 24).toFixed(1),
+				parseFloat(1850 / 7 / 24).toFixed(1),
+				parseFloat(2250 / 7 / 24).toFixed(1),
+				parseFloat(1500 / 7 / 24).toFixed(1),
+				parseFloat(2500 / 7 / 24).toFixed(1)
+			];
+		} else if (e.target.textContent === 'Weekly') {
+			e.target.classList.add('active');
+
+			trafficData.labels = [
+				'16-22',
+				'23-29',
+				'30-5',
+				'6-12',
+				'13-19',
+				'20-26',
+				'27-3',
+				'4-10',
+				'11-17',
+				'18-24',
+				'25-31'
+			];
+			trafficData.datasets[0].data = [
+				750,
+				1250,
+				1000,
+				2000,
+				1500,
+				1750,
+				1250,
+				1850,
+				2250,
+				1500,
+				2500
+			];
+		} else if (e.target.textContent === 'Monthly') {
+			e.target.classList.add('active');
+
+			trafficData.labels = [
+				'May 16-31',
+				'Jun 1-30',
+				'Jul 1-31'
+			];
+			trafficData.datasets[0].data = [
+				'2167',
+				'6396',
+				'8517'
+			];
+		}
+
+		// Create Graph
+		createGraph();
+	}
 });
+
+// Create Graph
+function createGraph() {
+	const trafficCtx = document.querySelector('#traffic-chart');
+	let trafficChart = new Chart(trafficCtx, {
+		type    : 'line',
+		data    : trafficData,
+		options : trafficOptions
+	});
+}
+createGraph();
 
 // Daily Traffic Graph
 // Data
@@ -209,6 +339,8 @@ const message = document.querySelector('#messageField');
 const send = document.querySelector('#send');
 
 send.addEventListener('click', (e) => {
+	e.preventDefault();
+
 	if (user.value === '' && message.value === '') {
 		alert('Please fill out user and message fields before sending');
 	} else if (user.value === '') {

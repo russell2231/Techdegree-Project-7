@@ -17,14 +17,21 @@
 		h3 {
 			margin: 0;
 		}
-		ul {
+		.traffic-nav {
 			list-style-type: none;
 			display: flex;
 			align-items: center;
 
-			li {
+			.traffic-nav-link {
 				margin: 0 0.5rem;
 				font-size: 1.2rem;
+				cursor: pointer;
+			}
+			.active {
+				background-color: $secondary-color;
+				color: $tertiary-color;
+				padding: 0.5rem;
+				border-radius: 5px;
 			}
 		}
 	}

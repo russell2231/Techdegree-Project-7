@@ -558,7 +558,7 @@ nav img {
   margin: 0;
 }
 
-.traffic .traffic-header ul {
+.traffic .traffic-header .traffic-nav {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,9 +568,17 @@ nav img {
           align-items: center;
 }
 
-.traffic .traffic-header ul li {
+.traffic .traffic-header .traffic-nav .traffic-nav-link {
   margin: 0 0.5rem;
   font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.traffic .traffic-header .traffic-nav .active {
+  background-color: #d1d1e9;
+  color: #e45858;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 .traffic .widget-container-full {
