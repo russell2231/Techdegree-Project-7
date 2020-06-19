@@ -267,7 +267,7 @@ header .bell .dropdown-content {
   display: none;
   position: absolute;
   top: 4rem;
-  right: 18rem;
+  right: 16rem;
   background-color: #fafafa;
   min-width: 160px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -275,13 +275,41 @@ header .bell .dropdown-content {
   z-index: 1;
 }
 
+@media (min-width: 768px) {
+  header .bell .dropdown-content {
+    top: 4rem;
+    right: 18rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .bell .dropdown-content {
+    top: 4.5rem;
+    right: 19.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header .bell .dropdown-content {
+    top: 5rem;
+    right: 22rem;
+  }
+}
+
 header .bell .dropdown-content a {
   color: #2b2c34;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1.5rem 2rem;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #dfdfdf;
+}
+
+@media (min-width: 768px) {
+  header .bell .dropdown-content a {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
 }
 
 header .bell .dropdown-content a:last-child {
@@ -868,6 +896,12 @@ nav img {
   .recent-activity .members-container .members-text a {
     font-size: 1.4rem;
   }
+}
+
+.members .members-container .members-text a,
+.recent-activity .members-container .members-text a {
+  text-decoration: none;
+  color: #7477bf;
 }
 
 .members .members-container .join-date,

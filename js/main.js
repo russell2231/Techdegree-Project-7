@@ -1,5 +1,5 @@
 // Notifications
-const bell = document.querySelector('#Layer_1');
+const bell = document.querySelector('#bell');
 const dropdown = document.querySelector('#notifications');
 
 function notiDropdown() {
