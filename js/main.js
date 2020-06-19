@@ -1,3 +1,29 @@
+// Notifications
+const bell = document.querySelector('#Layer_1');
+const dropdown = document.querySelector('#notifications');
+
+function notiDropdown() {
+	// Toggle Dropdown
+	const menu = document.querySelector('#dropdown');
+
+	menu.classList.toggle('show');
+
+	// Close dropdown if clicked outside
+	window.addEventListener('click', (e) => {
+		if (!e.target.classList.contains('noti')) {
+			menu.classList.remove('show');
+		}
+	});
+
+	// Clear notification icon
+	const notification = document.querySelector('#notification');
+
+	notification.style.display = 'none';
+}
+
+bell.addEventListener('click', notiDropdown);
+
+// Alert banner
 const alertBanner = document.querySelector('#alert');
 
 // Make HTML for banner

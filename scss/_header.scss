@@ -44,31 +44,66 @@ header {
 		}
 	}
 	.bell {
-		width: 3.5rem;
-		height: 3.3rem;
+		width: 4rem;
+		height: 3.7rem;
 		border-right: 1px solid $stroke;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		margin-right: 1rem;
-		padding-right: 0.5rem;
+		padding-right: 0.2rem;
 		cursor: pointer;
 
-		svg:hover {
-			background-color: $secondary-color;
+		.noti {
+			width: 50%;
+		}
+
+		.noti:hover {
+			transform: scale(1.4);
 			transition: 0.5s ease-out;
 		}
 
 		#notification {
 			width: 0.7rem;
 			height: 0.5rem;
+			align-self: flex-start;
 			background-color: $notification;
 			border-radius: 50%;
 			position: relative;
-			top: 0.3rem;
-			right: 0.5rem;
+			top: 0.8rem;
+			right: 0.3rem;
 
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 			transform: scale(1);
 			animation: pulse 2s infinite;
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			top: 4rem;
+			right: 18rem;
+			background-color: $background-shade;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+		.dropdown-content a {
+			color: $text-dark;
+			font-size: 1.5rem;
+			padding: 1.5rem 2rem;
+			text-decoration: none;
+			display: block;
+			border-bottom: $border;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		.dropdown-content a:hover {
+			background-color: darken($background-shade, 10%);
+		}
+		.show {
+			display: block;
 		}
 	}
 	img {
